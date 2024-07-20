@@ -1,9 +1,7 @@
-﻿using CustomMaps;
-using System.Net.Http;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace LegacyKZ.CustomMaps
+namespace CustomMaps
 {
     public class Timer : MonoBehaviour
     {
@@ -14,7 +12,7 @@ namespace LegacyKZ.CustomMaps
 
         public Text text;
 
-        private CustomMaps.Button[] buttons;
+        private Button[] buttons;
 
         public void StartTimer()
         {
@@ -43,8 +41,8 @@ namespace LegacyKZ.CustomMaps
         public void Reset()
         {
             CheckpointManager.RemoveCheckpoints();
-            CustomMaps.Button[] array = buttons;
-            foreach (CustomMaps.Button button in array)
+            Button[] array = buttons;
+            foreach (Button button in array)
             {
                 button.Reset();
             }
@@ -53,7 +51,7 @@ namespace LegacyKZ.CustomMaps
         private void Awake()
         {
             text = GetComponentInChildren<Text>();
-            buttons = UnityEngine.Object.FindObjectsOfType<CustomMaps.Button>();
+            buttons = UnityEngine.Object.FindObjectsOfType<Button>();
         }
 
         private void Update()

@@ -1,19 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using CustomMaps;
 using System.Security.Cryptography;
 using System.Text;
-using LegacyKZ.CustomMaps;
 using MelonLoader;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.XR;
 using MelonLoader.Utils;
-using System.Reflection;
 
-[assembly: MelonInfo(typeof(CustomMaps.CustomMaps), "LegacyKZ", "1.0.0", "lunakitty")]
+[assembly: MelonInfo(typeof(CustomMaps.CustomMaps), "LegacyKZ", "0.1.0", "lunakitty")]
 
 namespace CustomMaps
 {

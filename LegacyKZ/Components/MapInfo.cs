@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace LegacyKZ.CustomMaps
+namespace CustomMaps
 {
     public class MapInfo : MonoBehaviour
     {

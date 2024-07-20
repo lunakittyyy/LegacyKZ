@@ -94,15 +94,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomMaps\BuildInfo.cs" />
-    <Compile Include="CustomMaps\Button.cs" />
-    <Compile Include="CustomMaps\CheckpointManager.cs" />
-    <Compile Include="CustomMaps\CoroutineManager.cs" />
-    <Compile Include="CustomMaps\CustomMaps.cs" />
-    <Compile Include="CustomMaps\LevelSelect.cs" />
-    <Compile Include="CustomMaps\LevelSelectScroll.cs" />
-    <Compile Include="CustomMaps\MapInfo.cs" />
-    <Compile Include="CustomMaps\Timer.cs" />
+    <Compile Include="Components\BHopBlock.cs" />
+    <Compile Include="Components\BHopController.cs" />
+    <Compile Include="BuildInfo.cs" />
+    <Compile Include="Components\Button.cs" />
+    <Compile Include="CheckpointManager.cs" />
+    <Compile Include="Components\ChangeMat.cs" />
+    <Compile Include="Components\DisconnectButton.cs" />
+    <Compile Include="Components\Password.cs" />
+    <Compile Include="Components\Teleport.cs" />
+    <Compile Include="CoroutineManager.cs" />
+    <Compile Include="CustomMaps.cs" />
+    <Compile Include="Components\LevelSelect.cs" />
+    <Compile Include="Components\LevelSelectScroll.cs" />
+    <Compile Include="Components\MapInfo.cs" />
+    <Compile Include="Components\Timer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

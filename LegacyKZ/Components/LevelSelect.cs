@@ -1,11 +1,8 @@
-﻿using CustomMaps;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace LegacyKZ.CustomMaps
+namespace CustomMaps
 {
-
-
     public class LevelSelect : GorillaTriggerBox
     {
         private string levelName;

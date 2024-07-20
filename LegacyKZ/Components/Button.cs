@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LegacyKZ.CustomMaps
+namespace CustomMaps
 {
     public class Button : GorillaTriggerBox
     {

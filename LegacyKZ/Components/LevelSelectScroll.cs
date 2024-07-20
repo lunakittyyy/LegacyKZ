@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using CustomMaps;
 using UnityEngine;
 
-namespace LegacyKZ.CustomMaps
+namespace CustomMaps
 {
     public class LevelSelectScroll : GorillaTriggerBox
     {
