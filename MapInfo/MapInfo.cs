@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
-namespace LegacyKZ.CustomMaps
+
+namespace MapInfo
 {
     public class MapInfo : MonoBehaviour
     {

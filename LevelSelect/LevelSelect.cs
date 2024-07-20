@@ -1,11 +1,8 @@
-﻿using CustomMaps;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace LegacyKZ.CustomMaps
+namespace CustomMaps
 {
-
-
     public class LevelSelect : GorillaTriggerBox
     {
         private string levelName;
@@ -22,7 +19,7 @@ namespace LegacyKZ.CustomMaps
         public override void OnBoxTriggered()
         {
             base.OnBoxTriggered();
-            StartCoroutine(global::CustomMaps.CustomMaps.instance.LoadMap(levelName, assetBundle));
+            StartCoroutine(CustomMaps.instance.LoadMap(levelName, assetBundle));
         }
     }
 }

@@ -1,17 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using CustomMaps;
 using System.Security.Cryptography;
 using System.Text;
-using LegacyKZ.CustomMaps;
 using MelonLoader;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.XR;
 using MelonLoader.Utils;
-using System.Reflection;
+using Timer;
 
 [assembly: MelonInfo(typeof(CustomMaps.CustomMaps), "LegacyKZ", "1.0.0", "lunakitty")]
 
@@ -86,8 +84,8 @@ namespace CustomMaps
 			startingPos = gps.transform.position;
 			corutineManager = gps.gameObject.AddComponent<CoroutineManager>();
 			Quaternion rotation = Quaternion.Euler(0f, -90f, 0f);
-			Object.Instantiate(customMapsPrefabs.LoadAsset("LevelSelectScrollForward"), LevelSelectScroll.forwardButtonPos, rotation);
-			Object.Instantiate(customMapsPrefabs.LoadAsset("LevelSelectScrollBackward"), LevelSelectScroll.backwardButtonPos, rotation);
+			Object.Instantiate(customMapsPrefabs.LoadAsset("LevelSelectScrollForward"), LevelSelectScroll.LevelSelectScroll.forwardButtonPos, rotation);
+			Object.Instantiate(customMapsPrefabs.LoadAsset("LevelSelectScrollBackward"), LevelSelectScroll.LevelSelectScroll.backwardButtonPos, rotation);
 			Physics.IgnoreLayerCollision(9, 12, ignore: false);
 		}
 
@@ -116,7 +114,7 @@ namespace CustomMaps
 				{
 					return;
 				}
-				if (MapInfo.instance.gamemode == "gkz")
+				if (MapInfo.MapInfo.instance.gamemode == "gkz")
 				{
 					InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.primaryButton, out var value);
 					if (value && !lastA)
@@ -149,20 +147,20 @@ namespace CustomMaps
 					Disconnect();
 				}
 				lastMenu = value4;
-				if (MapInfo.instance.isTagged)
+				if (MapInfo.MapInfo.instance.isTagged)
 				{
-					gps.jumpMultiplier = MapInfo.instance.itJumpMultilier;
-					gps.maxJumpSpeed = MapInfo.instance.itMaxJumpSpeed;
+					gps.jumpMultiplier = MapInfo.MapInfo.instance.itJumpMultilier;
+					gps.maxJumpSpeed = MapInfo.MapInfo.instance.itMaxJumpSpeed;
 				}
-				if (!MapInfo.instance.canTag)
+				if (!MapInfo.MapInfo.instance.canTag)
 				{
 					gps.taggedTime = 0f;
 					gps.tagCooldown = 0f;
 				}
-				gtm.fastJumpMultiplier = MapInfo.instance.itJumpMultilier;
-				gtm.fastJumpLimit = MapInfo.instance.itMaxJumpSpeed;
-				gtm.slowJumpMultiplier = MapInfo.instance.noobJumpMultiplier;
-				gtm.slowJumpLimit = MapInfo.instance.noobMaxJumpSpeed;
+				gtm.fastJumpMultiplier = MapInfo.MapInfo.instance.itJumpMultilier;
+				gtm.fastJumpLimit = MapInfo.MapInfo.instance.itMaxJumpSpeed;
+				gtm.slowJumpMultiplier = MapInfo.MapInfo.instance.noobJumpMultiplier;
+				gtm.slowJumpLimit = MapInfo.MapInfo.instance.noobMaxJumpSpeed;
 			}
 		}
 
@@ -204,14 +202,14 @@ namespace CustomMaps
 			CheckpointManager.ResetCheckpoints();
 			CheckpointManager.SaveCheckpoint(spawn.position, spawn.rotation.eulerAngles.y);
 			CheckpointManager.LoadCheckpoint();
-			MapInfo.instance = (MapInfo)map.GetComponent("CustomMaps.MapInfo");
+			MapInfo.MapInfo.instance = (MapInfo.MapInfo)map.GetComponent("CustomMaps.MapInfo");
 			if (GorillaTagManager.instance == null)
 			{
 				gtm = new GameObject("GorillaTagManager").AddComponent<GorillaTagManager>();
 				gtm.UpdateTagState();
 			}
-			Timer t = gps.GetComponent<Timer>();
-			if (MapInfo.instance.gamemode == "gkz" && !t)
+			Timer.Timer t = gps.GetComponent<Timer.Timer>();
+			if (MapInfo.MapInfo.instance.gamemode == "gkz" && !t)
 			{
 				Object timerPrefab = customMapsPrefabs.LoadAsset("Timer");
 				timer = (GameObject)Object.Instantiate(timerPrefab);
@@ -227,9 +225,9 @@ namespace CustomMaps
 					timer.transform.localPosition = new Vector3(0f, 0f, 0.5f);
 					timer.transform.localRotation = Quaternion.identity;
 				}
-				gps.gameObject.AddComponent<Timer>();
+				gps.gameObject.AddComponent<Timer.Timer>();
 			}
-			if (MapInfo.instance.gamemode != "gkz" && (bool)t)
+			if (MapInfo.MapInfo.instance.gamemode != "gkz" && (bool)t)
 			{
 				Object.Destroy(t);
 				Object.Destroy(timer);
@@ -251,7 +249,7 @@ namespace CustomMaps
 			inCustomRoom = false;
 			gps.transform.position = startingPos;
 			Object.Destroy(map);
-			Object.Destroy(gps.GetComponent<Timer>());
+			Object.Destroy(gps.GetComponent<Timer.Timer>());
 			Object.Destroy(timer);
 		}
 

@@ -1,9 +1,8 @@
 ﻿using CustomMaps;
-using System.Net.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace LegacyKZ.CustomMaps
+namespace Timer
 {
     public class Timer : MonoBehaviour
     {
@@ -28,7 +27,7 @@ namespace LegacyKZ.CustomMaps
             if (isTiming)
             {
                 Reset();
-                global::CustomMaps.CustomMaps.gps.myVRRig.PlayTagSound(2);
+                CustomMaps.CustomMaps.gps.myVRRig.PlayTagSound(2);
             }
             isTiming = false;
         }
@@ -87,4 +86,3 @@ namespace LegacyKZ.CustomMaps
         }
     }
 }
-

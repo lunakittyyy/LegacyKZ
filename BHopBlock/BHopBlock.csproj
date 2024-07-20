@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{219E244E-310F-4EC7-8972-E9416ECE3E75}</ProjectGuid>
+    <ProjectGuid>{7A7880DF-6C11-4B17-9F9D-FB3A1464994A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LegacyKZ</RootNamespace>
-    <AssemblyName>LegacyKZ</AssemblyName>
+    <RootNamespace>BHopBlock</RootNamespace>
+    <AssemblyName>BHopBlock</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -37,15 +37,6 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="LevelSelect">
-      <HintPath>..\LevelSelectScroll\bin\Debug\LevelSelect.dll</HintPath>
-    </Reference>
-    <Reference Include="LevelSelectScroll">
-      <HintPath>..\LevelSelectScroll\bin\Debug\LevelSelectScroll.dll</HintPath>
-    </Reference>
-    <Reference Include="MapInfo">
-      <HintPath>..\MapInfo\bin\Debug\MapInfo.dll</HintPath>
-    </Reference>
     <Reference Include="MelonLoader">
       <HintPath>..\..\..\..\Documents\BodyTag\MelonLoader\net6\MelonLoader.dll</HintPath>
     </Reference>
@@ -71,9 +62,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Timer">
-      <HintPath>..\Timer\bin\Debug\Timer.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
@@ -106,14 +94,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomMaps\BuildInfo.cs" />
-    <Compile Include="CustomMaps\CheckpointManager.cs" />
-    <Compile Include="CustomMaps\CoroutineManager.cs" />
-    <Compile Include="CustomMaps\CustomMaps.cs" />
+    <Compile Include="BHopBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\prefabs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
