@@ -37,15 +37,6 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="LevelSelect">
-      <HintPath>..\LevelSelectScroll\bin\Debug\LevelSelect.dll</HintPath>
-    </Reference>
-    <Reference Include="LevelSelectScroll">
-      <HintPath>..\LevelSelectScroll\bin\Debug\LevelSelectScroll.dll</HintPath>
-    </Reference>
-    <Reference Include="MapInfo">
-      <HintPath>..\MapInfo\bin\Debug\MapInfo.dll</HintPath>
-    </Reference>
     <Reference Include="MelonLoader">
       <HintPath>..\..\..\..\Documents\BodyTag\MelonLoader\net6\MelonLoader.dll</HintPath>
     </Reference>
@@ -71,9 +62,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Timer">
-      <HintPath>..\Timer\bin\Debug\Timer.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
@@ -107,9 +95,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomMaps\BuildInfo.cs" />
+    <Compile Include="CustomMaps\Button.cs" />
     <Compile Include="CustomMaps\CheckpointManager.cs" />
     <Compile Include="CustomMaps\CoroutineManager.cs" />
     <Compile Include="CustomMaps\CustomMaps.cs" />
+    <Compile Include="CustomMaps\LevelSelect.cs" />
+    <Compile Include="CustomMaps\LevelSelectScroll.cs" />
+    <Compile Include="CustomMaps\MapInfo.cs" />
+    <Compile Include="CustomMaps\Timer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

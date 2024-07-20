@@ -1,21 +1,8 @@
-﻿/* HACK: This is FUCKED UP.
-/ To make this build correctly, you have to comment out the code
-/ that uses LegacyKZ so you can build this so LegacyKZ can use it.
-/ This is because LegacyKZ uses stuff from this project
-/ while this project uses stuff from LegacyKZ.
-/ This is a super annoying circular dependency issue and
-/ I have no idea why Graic coded this in such a fucked up way
-*/
-
+﻿using System.Collections.Generic;
 using CustomMaps;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
-namespace LevelSelectScroll
+namespace LegacyKZ.CustomMaps
 {
     public class LevelSelectScroll : GorillaTriggerBox
     {
@@ -33,7 +20,7 @@ namespace LevelSelectScroll
 
         private static int levelsPerPage = 5;
 
-        private static GameObject levelSelectPreafab;
+        private static Object levelSelectPreafab;
 
         private static List<GameObject> levelSelects = new List<GameObject>();
 
@@ -45,8 +32,8 @@ namespace LevelSelectScroll
 
         public void Start()
         {
-            levelSelectPreafab = (GameObject)CustomMaps.CustomMaps.customMapsPrefabs.LoadAsset("LevelSelect");
-            levelCount = CustomMaps.CustomMaps.assetBundles.Count;
+            levelSelectPreafab = global::CustomMaps.CustomMaps.customMapsPrefabs.LoadAsset("LevelSelect");
+            levelCount = global::CustomMaps.CustomMaps.assetBundles.Count;
             UpdateLevelSelects();
         }
 
@@ -62,7 +49,7 @@ namespace LevelSelectScroll
         {
             foreach (GameObject levelSelect in levelSelects)
             {
-                UnityEngine.Object.Destroy(levelSelect);
+                Object.Destroy(levelSelect);
             }
             levelSelects = new List<GameObject>();
             Vector3 position = levelSelectStart;
@@ -71,7 +58,7 @@ namespace LevelSelectScroll
             {
                 if (num >= page * levelsPerPage && num < (page + 1) * levelsPerPage)
                 {
-                    GameObject gameObject = GameObject.Instantiate(levelSelectPreafab, position, Quaternion.identity);
+                    GameObject gameObject = (GameObject)Object.Instantiate(levelSelectPreafab, position, Quaternion.identity);
                     gameObject.GetComponent<LevelSelect>().Init(assetBundle.Key, assetBundle.Value);
                     levelSelects.Add(gameObject);
                     position += levelSelectOffset;
