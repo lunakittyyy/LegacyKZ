@@ -2,7 +2,7 @@
 
 
 # Credits
-- most code and maps by Graic
+- most code and maps by Graic and SneakyEvil
 
 # Map specifications
 - All map objects must be under an Empty named "Map", and its prefab needs to be named "Map" also
