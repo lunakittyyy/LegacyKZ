@@ -59,7 +59,7 @@ namespace CustomMaps
             return bundle;
         }
 
-        public override async void OnLateInitializeMelon()
+        public override void OnLateInitializeMelon()
 		{
 			instance = this;
 
