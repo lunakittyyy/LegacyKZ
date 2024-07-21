@@ -11,7 +11,7 @@ using UnityEngine.XR;
 using MelonLoader.Utils;
 using System.Threading.Tasks;
 
-[assembly: MelonInfo(typeof(CustomMaps.CustomMaps), "LegacyKZ", "0.1.0", "lunakitty")]
+[assembly: MelonInfo(typeof(CustomMaps.CustomMaps), "LegacyKZ", "0.1.3", "lunakitty")]
 
 namespace CustomMaps
 {

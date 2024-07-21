@@ -97,7 +97,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuildInfo.cs" />
     <Compile Include="CheckpointManager.cs" />
     <Compile Include="CustomMaps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
