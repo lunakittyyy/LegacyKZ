@@ -62,8 +62,6 @@ namespace CustomMaps
         public override async void OnLateInitializeMelon()
 		{
 			instance = this;
-			await Task.Delay(5000);
-			System.Reflection.Assembly.LoadFile($"{MelonEnvironment.ModsDirectory}\\ExternalScripts.dll");
 
             LoggerInstance.Msg($"loading maps from: {MelonEnvironment.ModsDirectory}\\CustomMaps");
 			DirectoryInfo directoryInfo = new DirectoryInfo($"{MelonEnvironment.ModsDirectory}\\CustomMaps");
