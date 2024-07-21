@@ -37,6 +37,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="ExternalScripts">
+      <HintPath>..\ExternalScripts\bin\Debug\netstandard2.1\ExternalScripts.dll</HintPath>
+    </Reference>
     <Reference Include="MelonLoader">
       <HintPath>..\..\..\..\Documents\BodyTag\MelonLoader\net6\MelonLoader.dll</HintPath>
     </Reference>
@@ -94,23 +97,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\BHopBlock.cs" />
-    <Compile Include="Components\BHopController.cs" />
     <Compile Include="BuildInfo.cs" />
-    <Compile Include="Components\Button.cs" />
     <Compile Include="CheckpointManager.cs" />
-    <Compile Include="Components\ChangeMat.cs" />
-    <Compile Include="Components\DisconnectButton.cs" />
-    <Compile Include="Components\Password.cs" />
-    <Compile Include="Components\Teleport.cs" />
-    <Compile Include="CoroutineManager.cs" />
     <Compile Include="CustomMaps.cs" />
-    <Compile Include="Components\LevelSelect.cs" />
-    <Compile Include="Components\LevelSelectScroll.cs" />
-    <Compile Include="Components\MapInfo.cs" />
-    <Compile Include="Components\Timer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Resources\prefabs" />
   </ItemGroup>

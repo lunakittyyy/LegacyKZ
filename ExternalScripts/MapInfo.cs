@@ -13,7 +13,7 @@ namespace CustomMaps
 
         public string author;
 
-        public Text leaderboard;
+        public TextMesh leaderboard;
 
         public bool canTag = true;
 

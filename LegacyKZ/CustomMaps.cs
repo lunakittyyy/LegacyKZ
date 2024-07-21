@@ -9,6 +9,7 @@ using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.XR;
 using MelonLoader.Utils;
+using System.Threading.Tasks;
 
 [assembly: MelonInfo(typeof(CustomMaps.CustomMaps), "LegacyKZ", "0.1.0", "lunakitty")]
 
@@ -17,8 +18,6 @@ namespace CustomMaps
 	public class CustomMaps : MelonMod
 	{
 		public static volatile CustomMaps instance;
-
-		public static volatile CoroutineManager corutineManager;
 
 		public static Dictionary<string, AssetBundle> assetBundles = new Dictionary<string, AssetBundle>();
 
@@ -60,10 +59,13 @@ namespace CustomMaps
             return bundle;
         }
 
-        public override void OnLateInitializeMelon()
+        public override async void OnLateInitializeMelon()
 		{
 			instance = this;
-			LoggerInstance.Msg($"loading maps from: {MelonEnvironment.ModsDirectory}\\CustomMaps");
+			await Task.Delay(5000);
+			System.Reflection.Assembly.LoadFile($"{MelonEnvironment.ModsDirectory}\\ExternalScripts.dll");
+
+            LoggerInstance.Msg($"loading maps from: {MelonEnvironment.ModsDirectory}\\CustomMaps");
 			DirectoryInfo directoryInfo = new DirectoryInfo($"{MelonEnvironment.ModsDirectory}\\CustomMaps");
 			FileInfo[] files = directoryInfo.GetFiles();
 			foreach (FileInfo fileInfo in files)
@@ -81,10 +83,18 @@ namespace CustomMaps
 			CheckpointManager.gps = gps;
 			offlineVRRig = GameObject.Find("OfflineVRRig");
 			startingPos = gps.transform.position;
-			corutineManager = gps.gameObject.AddComponent<CoroutineManager>();
 			Quaternion rotation = Quaternion.Euler(0f, -90f, 0f);
-			Object.Instantiate(customMapsPrefabs.LoadAsset("LevelSelectScrollForward"), LevelSelectScroll.forwardButtonPos, rotation);
-			Object.Instantiate(customMapsPrefabs.LoadAsset("LevelSelectScrollBackward"), LevelSelectScroll.backwardButtonPos, rotation);
+
+			var fwdButton = customMapsPrefabs.LoadAsset("LevelSelectScrollForward") as GameObject;
+			var bckButton = customMapsPrefabs.LoadAsset("LevelSelectScrollBackward") as GameObject;
+
+			if (fwdButton == null)
+				LoggerInstance.Error("forward button is null");
+            if (bckButton == null)
+                LoggerInstance.Error("back button is null");
+
+            GameObject.Instantiate(fwdButton, new Vector3(-46f, 1.5f, -58.5f), rotation);
+            GameObject.Instantiate(bckButton, new Vector3(-46f, 1.5f, -58f), rotation);
 			Physics.IgnoreLayerCollision(9, 12, ignore: false);
 		}
 
@@ -179,7 +189,7 @@ namespace CustomMaps
 			{
 				if (GUI.Button(new Rect(1000f, num, 200f, 20f), assetBundle.Key))
 				{
-					corutineManager.StartCoroutine(LoadMap(assetBundle.Key, assetBundle.Value));
+					MelonCoroutines.Start(LoadMap(assetBundle.Key, assetBundle.Value));
 				}
 				num += 20;
 			}

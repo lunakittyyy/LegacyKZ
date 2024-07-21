@@ -31,8 +31,8 @@ namespace CustomMaps
 
         public void Start()
         {
-            levelSelectPreafab = global::CustomMaps.CustomMaps.customMapsPrefabs.LoadAsset("LevelSelect");
-            levelCount = global::CustomMaps.CustomMaps.assetBundles.Count;
+            levelSelectPreafab = CustomMaps.customMapsPrefabs.LoadAsset("LevelSelect");
+            levelCount = CustomMaps.assetBundles.Count;
             UpdateLevelSelects();
         }
 
@@ -53,7 +53,7 @@ namespace CustomMaps
             levelSelects = new List<GameObject>();
             Vector3 position = levelSelectStart;
             int num = 0;
-            foreach (KeyValuePair<string, AssetBundle> assetBundle in global::CustomMaps.CustomMaps.assetBundles)
+            foreach (KeyValuePair<string, AssetBundle> assetBundle in CustomMaps.assetBundles)
             {
                 if (num >= page * levelsPerPage && num < (page + 1) * levelsPerPage)
                 {

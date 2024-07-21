@@ -10,7 +10,7 @@ namespace CustomMaps
 
         public bool isTiming;
 
-        public Text text;
+        public TextMesh text;
 
         private Button[] buttons;
 
@@ -26,7 +26,7 @@ namespace CustomMaps
             if (isTiming)
             {
                 Reset();
-                global::CustomMaps.CustomMaps.gps.myVRRig.PlayTagSound(2);
+                CustomMaps.gps.myVRRig.PlayTagSound(2);
             }
             isTiming = false;
         }
@@ -50,7 +50,7 @@ namespace CustomMaps
 
         private void Awake()
         {
-            text = GetComponentInChildren<Text>();
+            text = GetComponentInChildren<TextMesh>();
             buttons = UnityEngine.Object.FindObjectsOfType<Button>();
         }
 

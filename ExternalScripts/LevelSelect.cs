@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using MelonLoader;
 
 namespace CustomMaps
 {
@@ -13,13 +14,13 @@ namespace CustomMaps
         {
             levelName = level;
             assetBundle = ab;
-            GetComponentInChildren<Text>().text = levelName;
+            GetComponentInChildren<TextMesh>().text = levelName;
         }
 
         public override void OnBoxTriggered()
         {
             base.OnBoxTriggered();
-            StartCoroutine(global::CustomMaps.CustomMaps.instance.LoadMap(levelName, assetBundle));
+            StartCoroutine(CustomMaps.instance.LoadMap(levelName, assetBundle));
         }
     }
 }
