@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 4085735431
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: prefabs
+      Dependencies: {}
+    Info_1:
+      Name: gkz_pingas
+      Dependencies: {}

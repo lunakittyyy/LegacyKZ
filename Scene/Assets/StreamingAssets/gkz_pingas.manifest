@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 2761462203
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2eb5e3c32775973c8836839ad692dfc0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 287535bfbbb43e2e00c183f730455857
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: -313991485, guid: 94555062b9a4f0e4a97aa2e640c40261, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+Assets:
+- Assets/Map.prefab
+Dependencies: []

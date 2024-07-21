@@ -1,0 +1,53 @@
+ManifestFileVersion: 0
+CRC: 2921805788
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 317922d8c0ce4452f49de2d905d12516
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe92b5ff01b377687e6e27461e175f1d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 102
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: -1472122344, guid: 665ac89964010b3429fc3626dbcd98e3, type: 3}
+- Class: 114
+  Script: {fileID: 1642418385, guid: 665ac89964010b3429fc3626dbcd98e3, type: 3}
+- Class: 114
+  Script: {fileID: -1524332055, guid: 665ac89964010b3429fc3626dbcd98e3, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/PrefabInstance/LevelSelect.prefab
+- Assets/PrefabInstance/LevelSelectScrollForward.prefab
+- Assets/PrefabInstance/LevelSelectScrollBackward.prefab
+- Assets/PrefabInstance/Timer.prefab
+Dependencies: []
