@@ -75,29 +75,26 @@ namespace CustomMaps
 				assetBundles.Add(fileInfo.Name, value);
 			}
 			customMapsPrefabs = LoadAssetBundle("LegacyKZ.Resources.prefabs");
-		}
-
-        public override void OnSceneWasLoaded(int buildIndex, string sceneName)
-        {
+           
 			gps = Object.FindObjectOfType<GorillaPlaySpace>();
-			CheckpointManager.gps = gps;
-			offlineVRRig = GameObject.Find("OfflineVRRig");
-			startingPos = gps.transform.position;
-			Quaternion rotation = Quaternion.Euler(0f, -90f, 0f);
+            CheckpointManager.gps = gps;
+            offlineVRRig = GameObject.Find("OfflineVRRig");
+            startingPos = gps.transform.position;
+            Quaternion rotation = Quaternion.Euler(0f, -90f, 0f);
 
-			var fwdButton = customMapsPrefabs.LoadAsset("LevelSelectScrollForward") as GameObject;
-			var bckButton = customMapsPrefabs.LoadAsset("LevelSelectScrollBackward") as GameObject;
+            var fwdButton = customMapsPrefabs.LoadAsset("LevelSelectScrollForward") as GameObject;
+            var bckButton = customMapsPrefabs.LoadAsset("LevelSelectScrollBackward") as GameObject;
 
-			if (fwdButton == null)
-				LoggerInstance.Error("forward button is null");
+            if (fwdButton == null)
+                LoggerInstance.Error("forward button is null");
             if (bckButton == null)
                 LoggerInstance.Error("back button is null");
 
             GameObject.Instantiate(fwdButton, new Vector3(-46f, 1.5f, -58.5f), rotation); // FIXME: A null ref exception happens here. The prefab is not null and
-																						  // both the position and rotation were just made in this method. What the fuck. Kill me
+                                                                                          // both the position and rotation were just made in this method. What the fuck. Kill me
             GameObject.Instantiate(bckButton, new Vector3(-46f, 1.5f, -58f), rotation);
-			Physics.IgnoreLayerCollision(9, 12, ignore: false);
-		}
+            Physics.IgnoreLayerCollision(9, 12, ignore: false);
+        }
 
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
