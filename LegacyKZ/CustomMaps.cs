@@ -93,7 +93,8 @@ namespace CustomMaps
             if (bckButton == null)
                 LoggerInstance.Error("back button is null");
 
-            GameObject.Instantiate(fwdButton, new Vector3(-46f, 1.5f, -58.5f), rotation);
+            GameObject.Instantiate(fwdButton, new Vector3(-46f, 1.5f, -58.5f), rotation); // FIXME: A null ref exception happens here. The prefab is not null and
+																						  // both the position and rotation were just made in this method. What the fuck. Kill me
             GameObject.Instantiate(bckButton, new Vector3(-46f, 1.5f, -58f), rotation);
 			Physics.IgnoreLayerCollision(9, 12, ignore: false);
 		}
