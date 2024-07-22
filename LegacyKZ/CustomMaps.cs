@@ -154,8 +154,8 @@ namespace CustomMaps
 				lastMenu = value4;
 				if (MapInfo.instance.isTagged)
 				{
-					gps.jumpMultiplier = MapInfo.instance.itJumpMultilier;
-					gps.maxJumpSpeed = MapInfo.instance.itMaxJumpSpeed;
+					GorillaLocomotion.Player.Instance.jumpMultiplier = MapInfo.instance.itJumpMultilier;
+                    GorillaLocomotion.Player.Instance.maxJumpSpeed = MapInfo.instance.itMaxJumpSpeed;
 				}
 				if (!MapInfo.instance.canTag)
 				{
@@ -260,10 +260,12 @@ namespace CustomMaps
 
 		public static void SetPosRot(Vector3 pos, float rot)
 		{
+			GorillaLocomotion.Player.Instance.enabled = false;
 			gps.transform.rotation = Quaternion.Euler(0f, gps.transform.rotation.eulerAngles.y + rot - gps.headsetTransform.rotation.eulerAngles.y, 0f);
-			gps.transform.position = gps.transform.position + pos - gps.headsetTransform.position;
+			gps.transform.position = pos;
 			gps.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-		}
+            GorillaLocomotion.Player.Instance.enabled = true;
+        }
 
 		public static string sha256_hash(string value)
 		{

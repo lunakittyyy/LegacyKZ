@@ -17,13 +17,13 @@ TagManager:
   - Gorilla Object
   - Gorilla Hand
   - Gorilla Trigger
+  - Camera Scene Trigger
+  - Gorilla Head
+  - Gorilla Tag Collider
+  - Gorilla Boundary
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - GorillaInteractable
   - 
   - 
   - 

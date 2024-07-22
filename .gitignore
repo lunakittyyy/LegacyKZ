@@ -389,3 +389,4 @@ FodyWeavers.xsd
 .idea/
 *.sln.iml
 /Scene/Library
+/Scene/Assets/StreamingAssets

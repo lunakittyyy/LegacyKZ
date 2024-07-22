@@ -32,31 +32,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\Documents\BodyTag\MelonLoader\net6\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\MelonLoader\net6\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="ExternalScripts">
       <HintPath>..\ExternalScripts\bin\Debug\netstandard2.1\ExternalScripts.dll</HintPath>
     </Reference>
     <Reference Include="MelonLoader">
-      <HintPath>..\..\..\..\Documents\BodyTag\MelonLoader\net6\MelonLoader.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\MelonLoader\net6\MelonLoader.dll</HintPath>
     </Reference>
     <Reference Include="MeshBakerCore">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\MeshBakerCore.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\MeshBakerCore.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Security">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\Mono.Security.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\Photon3Unity3D.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="PhotonRealtime">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\PhotonRealtime.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\PhotonRealtime.dll</HintPath>
     </Reference>
     <Reference Include="PhotonUnityNetworking">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\PhotonUnityNetworking.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\PhotonUnityNetworking.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,34 +66,34 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\UnityEngine.InputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XRModule">
-      <HintPath>..\..\..\..\Documents\BodyTag\GorillaTag_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\StickTurnFix\GorillaTag_Data\Managed\UnityEngine.XRModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -101,7 +101,6 @@
     <Compile Include="CustomMaps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Resources\prefabs" />
   </ItemGroup>

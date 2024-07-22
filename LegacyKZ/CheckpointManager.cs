@@ -22,11 +22,11 @@ namespace CustomMaps
 			{
 				checkpointsPos.Push(gps.headsetTransform.position);
 				checkpointsRot.Push(gps.headsetTransform.rotation.eulerAngles.y);
-				gps.myVRRig.PlayTagSound(1);
+				//gps.myVRRig.PlayTagSound(1);
 			}
 			else
 			{
-				gps.myVRRig.PlayTagSound(0);
+				//gps.myVRRig.PlayTagSound(0);
 			}
 		}
 
