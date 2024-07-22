@@ -202,6 +202,7 @@ namespace CustomMaps
 			offlineVRRig.SetActive(value: false);
 			Object mapPrefab = levelAssetBundle.LoadAsset("Map");
 			map = (GameObject)Object.Instantiate(mapPrefab);
+			GameObject.Destroy(GameObject.Find("DeathBox"));
 			map.transform.position = levelSpawnPos;
 			Transform spawn = map.transform.Find("Spawn");
 			CheckpointManager.ResetCheckpoints();
@@ -261,7 +262,7 @@ namespace CustomMaps
 		public static void SetPosRot(Vector3 pos, float rot)
 		{
 			GorillaLocomotion.Player.Instance.enabled = false;
-			gps.transform.rotation = Quaternion.Euler(0f, gps.transform.rotation.eulerAngles.y + rot - gps.headsetTransform.rotation.eulerAngles.y, 0f);
+			//gps.transform.rotation = Quaternion.Euler(0f, gps.transform.rotation.eulerAngles.y + rot - gps.headsetTransform.rotation.eulerAngles.y, 0f);
 			gps.transform.position = pos;
 			gps.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             GorillaLocomotion.Player.Instance.enabled = true;
